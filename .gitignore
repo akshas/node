@@ -1,0 +1,12 @@
+/node_modules/
+/dist/
+/.git/
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
+/.bowerrc
+/.idea/
+/app/debug.log
+/debug.log
+/nbproject
