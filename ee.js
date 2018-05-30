@@ -18,7 +18,7 @@ const myEmitter = new MyEmitter();
 // myEmitter.emit('event', 1 + 1);
 
 myEmitter.on('event', function(a, b) {
-  // console.log( this === myEmitter);
+  console.log(a,b, this );
   // Prints:
   //   a b MyEmitter {
   //     domain: null,
@@ -28,11 +28,11 @@ myEmitter.on('event', function(a, b) {
 });
 myEmitter.emit('event', 'd', 'b');
 
-myEmitter.on('event', (c, d) => console.log(c, d, this));
+// myEmitter.on('event', (c, d) => console.log(c, d, this));
 myEmitter.emit('event', 'c', 'd');
-myEmitter.on('error', () =>{
+myEmitter.on('error', () => {
   console.error('whoops, there was an error!');
 });
-console.log(util.inspect(server.listeners('request')));
+// console.log(util.inspect(server.listeners('request')));
 
 // myEmitter.emit('error');
